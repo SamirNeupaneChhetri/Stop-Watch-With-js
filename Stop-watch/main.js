@@ -56,6 +56,11 @@
 
 
 const display = document.getElementById("display"); // Removed the "#" from getElementById
+const StartBtn = document.getElementById("start-btn");
+const StopBtn = document.getElementById("stop-btn");
+const ResetBtn = document.getElementById("reset-btn");
+
+
 let timer = null;
 let startTime = 0;
 let elapsedTime = 0;
@@ -103,3 +108,7 @@ function update() {
     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;  // Updated variable names
 }
 
+
+StartBtn.addEventListener("click", start);
+StopBtn.addEventListener("click", stop);
+ResetBtn.addEventListener("click", reset);
